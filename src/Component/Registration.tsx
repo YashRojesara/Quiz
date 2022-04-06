@@ -38,7 +38,7 @@ const Registration: React.FC = () => {
             <Typography variant="h2">
                 Registration Form
             </Typography>
-            <TextField margin="normal" value={name} onChange={(e) => setName(e.target.value)} label="Enter Your Name" variant="outlined" />
+            <TextField inputProps={{ 'data-testid': 'name-search-input' }}  margin="normal" value={name} onChange={(e) => setName(e.target.value)} label="Enter Your Name" variant="outlined" />
 
             <div className={classes.margin}>
             <FormControl>
@@ -52,11 +52,11 @@ const Registration: React.FC = () => {
                 >
                     {GenderArray.map((x) => {
                         return (
-                            <FormControlLabel value={x} control={<Radio />} label={x} />
+                            <FormControlLabel key={x} value={x} control={<Radio />} label={x} />
                         )})
                     }
                 </RadioGroup>
-            </FormControl>
+            </FormControl>        
             </div>
             
             <div className={classes.margin}>
@@ -71,7 +71,7 @@ const Registration: React.FC = () => {
                 >
                     {LanguageArray.map((x) => {
                         return (
-                            <MenuItem value={x}>{x}</MenuItem>
+                            <MenuItem key={x} value={x}>{x}</MenuItem>
                         )
                     })
                     }                
@@ -79,10 +79,10 @@ const Registration: React.FC = () => {
             </FormControl>
             </div>
             <div className={classes.margin}>
-                <Button onClick={onButtonClick} variant='outlined' color='secondary' disabled={name ? false : true} >Next</Button>
+                <Button data-testid="next" onClick={onButtonClick} variant='outlined' color='secondary' disabled={name ? false : true} >Next</Button>
             </div>
         </div>
     )
 }
-
+    
 export default Registration;

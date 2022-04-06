@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import Quiz from 'react-quiz-component';
 import { englishQuiz, hindiQuiz } from "./constants";
 import Report from "./Report";
-// import CustomResultPage from "./CustomResultPage";
 
 const useStyles = makeStyles({
     main: {
@@ -11,19 +10,23 @@ const useStyles = makeStyles({
     }
 })
 
-const Quizz: React.FC = () => {
+const QuizComponent: React.FC = () => {
     const classes = useStyles();
     const { state} = useLocation();
     const data = state as any;
 
-    const {selectedLanguage} = data;
+    let selectedLanguage = 'Hindi';
+    if (data) {
+        selectedLanguage = data.selectedLanguage;
+    }
+
     const reactQuiz = selectedLanguage === 'Hindi' ? hindiQuiz : englishQuiz;
 
     return (
-        <div className={classes.main}>
+        <div data-testid='quiz' className={classes.main}>
             <Quiz quiz={reactQuiz} showDefaultResult={false} customResultPage={(obj: any) => Report(obj)} />
         </div>
     )
 }
 
-export default Quizz;
+export default QuizComponent;

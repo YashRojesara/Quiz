@@ -3,7 +3,6 @@ import Chart from "react-google-charts"
 interface IReportProps {
   numberOfCorrectAnswers: number,
   numberOfIncorrectAnswers: number
-  numberOfQuestions: number
   questions: IQuestion[]
   userInput: string | string[]
 }
@@ -35,7 +34,7 @@ const Report = (obj: IReportProps) => {
             />
             <div>
                 {
-                    questions.map((question: IQuestion, index: number) => {
+                    questions?.map((question: IQuestion, index: number) => {
                         return(
                             <>
                                 <div>

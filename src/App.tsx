@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Quizz from './Component/Quizz';
+import QuizComponent from './Component/QuizComponent';
 import Registration from './Component/Registration';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Registration />} />
-        <Route path="/Quiz" element={<Quizz />} />
+        <Route path="/Quiz" element={<QuizComponent />} />
       </Routes>
     </BrowserRouter>
   );
