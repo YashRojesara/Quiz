@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import QuizComponent from "../QuizComponent";
 
 jest.mock('react-router-dom', () => ({
@@ -13,18 +13,14 @@ test("should render component correctly", () => {
   render(<QuizComponent />);
 });
 
-test("initially Next button should be disabled", () => {
+test("quiz should be in the page", () => {
   render(<QuizComponent />);
-  const submitButton = screen.getByTestId(/quiz/i);
-  expect(submitButton).toBeInTheDocument();
+  const element = screen.getByTestId(/quiz/i);
+  expect(element).toBeInTheDocument();
 });
 
-// test("after enter country value submit button must be enabled", () => {
-//   render(<Registration />);
-//   const inputField = screen.getByTestId(/name-search-input/i);
-//   fireEvent.change(inputField, {
-//     target: { value: "india" },
-//   });
-//   expect(screen.getByText(/next/i)).toBeEnabled();
-// });
-
+test("Name & Gender should be in the page", () => {
+  render(<QuizComponent />);
+  const element = screen.getByTestId(/identity/i);
+  expect(element).toBeInTheDocument();
+});

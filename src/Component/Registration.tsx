@@ -40,7 +40,7 @@ const Registration: React.FC = () => {
             </Typography>
             <TextField inputProps={{ 'data-testid': 'name-search-input' }}  margin="normal" value={name} onChange={(e) => setName(e.target.value)} label="Enter Your Name" variant="outlined" />
 
-            <div className={classes.margin}>
+            <div data-testid='gender' className={classes.margin}>
             <FormControl>
                 <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
                 <RadioGroup
@@ -59,7 +59,7 @@ const Registration: React.FC = () => {
             </FormControl>        
             </div>
             
-            <div className={classes.margin}>
+            <div data-testid='language' className={classes.margin}>
             <FormControl>
                 <InputLabel id="demo-simple-select-label">Language</InputLabel>
                 <Select

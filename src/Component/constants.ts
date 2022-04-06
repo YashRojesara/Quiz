@@ -86,7 +86,7 @@ export const hindiQuiz =  {
     "nrOfQuestions": "5",
     "questions": [
       {
-        "question": "How can you access the state of a component from inside of a member function?",
+        "question": "(Hindi) How can you access the state of a component from inside of a member function?",
         "questionType": "text",
         "answerSelectionType": "single",
         "answers": [
@@ -102,7 +102,7 @@ export const hindiQuiz =  {
         "point": "20"
       },
       {
-        "question": "ReactJS is developed by _____?",
+        "question": "(Hindi) ReactJS is developed by _____?",
         "questionType": "text",
         "answerSelectionType": "single",
         "answers": [
@@ -116,7 +116,7 @@ export const hindiQuiz =  {
         "point": "20"
       },
       {
-        "question": "ReactJS is an MVC based framework?",
+        "question": "(Hindi) ReactJS is an MVC based framework?",
         "questionType": "text",
         "answerSelectionType": "single",
         "answers": [
@@ -130,7 +130,7 @@ export const hindiQuiz =  {
         "point": "10"
       },
       {
-        "question": "Which of the following concepts is/are key to ReactJS?",
+        "question": "(Hindi) Which of the following concepts is/are key to ReactJS?",
         "questionType": "text",
         "answerSelectionType": "single",
         "answers": [
@@ -145,7 +145,7 @@ export const hindiQuiz =  {
         "point": "30"
       },      
       {
-        "question": "What are the advantages of React JS?",
+        "question": "(Hindi) What are the advantages of React JS?",
         "questionType": "text",
         "answerSelectionType": "multiple",
         "answers": [

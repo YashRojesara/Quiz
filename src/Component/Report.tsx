@@ -40,10 +40,10 @@ const Report = (obj: IReportProps) => {
                                 <div>
                                     {question.questionIndex}: {question.question}
                                 </div>
-                                <div>
+                                <div style={{marginLeft: '2em'}}>
                                     Options: 
                                 </div>
-                                <div>
+                                <div style={{marginLeft: '5em'}}>
                                 {
                                     question.answers.map((answer, index) => {
                                         return (
@@ -56,12 +56,14 @@ const Report = (obj: IReportProps) => {
                                     })
                                 }
                                 </div>
-                                <div>
+                                <br />
+                                <div style={{marginLeft: '5em'}}>
                                     Correct Answer(s): {question.correctAnswer}
                                 </div>
-                                <div>
+                                <div style={{marginLeft: '5em'}}>
                                     User Input: {userInput[index]}
                                 </div>
+                                <br />
                             </>
                         )
                     })

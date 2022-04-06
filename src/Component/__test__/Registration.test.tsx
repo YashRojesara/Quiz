@@ -14,15 +14,27 @@ test("should render component correctly", () => {
 
 test("initially Next button should be disabled", () => {
   render(<Registration />);
-  const submitButton = screen.getByTestId(/next/i);
-  expect(submitButton).toBeDisabled();
+  const button = screen.getByTestId(/next/i);
+  expect(button).toBeDisabled();
 });
 
-test("after enter country value submit button must be enabled", () => {
+test("after enter name value next button must be enabled", () => {
   render(<Registration />);
   const inputField = screen.getByTestId(/name-search-input/i);
   fireEvent.change(inputField, {
-    target: { value: "india" },
+    target: { value: "test" },
   });
   expect(screen.getByText(/next/i)).toBeEnabled();
 });
+
+test("gender radio buttons should be present", () => {
+  render(<Registration />);
+  const element = screen.getByTestId(/gender/i);
+  expect(element).toBeInTheDocument();
+})
+
+test("language drop-down should be present", () => {
+  render(<Registration />);
+  const element = screen.getByTestId(/language/i);
+  expect(element).toBeInTheDocument();
+})
